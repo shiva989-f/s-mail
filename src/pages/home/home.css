@@ -1,0 +1,173 @@
+ .main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    background: var(--heading-txt-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: great_vibes;
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-top: 4rem;
+    text-align: center;
+} 
+
+.input-container {
+    width: 50%;
+    height: 80%;
+    /* background-color: rgba(236, 236, 236, 0.5); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 0 4rem 0;
+    padding: 2rem;
+}
+
+.input{
+    width: 80%;
+    height: 5rem;
+    border: 2px solid rgba(88, 4, 64, 1);
+    border-radius: 10px;
+    outline: none;
+    font-family: gotu;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+    background-color: transparent;
+    margin: 2rem 1rem 1rem 1rem;
+    letter-spacing: 1px;
+}
+
+#msg {
+    height: 50%;
+    resize: none;
+    padding: 1rem
+}
+
+.error-msg {
+    width: 80%;
+    font-size: 1.6rem;
+    letter-spacing: .2rem;
+    color: tomato;
+    font-family: gotu;
+    padding: .6rem 0;
+    font-weight: 600;
+    padding-left: .5rem;
+}
+
+.hide {
+    display: none;
+}
+
+.copy-link {
+    width: 80%;
+    /* display flex will be on generate button click event */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.generated-link {
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: .1rem;
+    font-size: 1.4rem;
+    font-family: gotu;
+    text-decoration: underline;
+    color: white;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 1rem;
+    border: none;
+    font-size: 2.5rem;
+    font-family: great_vibes;
+    font-weight: bolder;
+    color: rgba(88, 4, 64, 1);
+    background: var(--heading-txt-gradient);
+    padding-top: .2rem;
+}
+
+.copy-btn {
+    height: 4rem;
+    padding: 0 2rem;
+}
+
+.generate {
+    width: 80%;
+    height: 5rem;
+}
+
+
+
+@media (max-width: 400px) {
+    .input-container {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .input {
+        width: 90%;
+        color: white;
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+    }
+
+    .send {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-container {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .input {
+        width: 90%;
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    .send {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .input-container {
+        width: 80%;
+        background-color: transparent;
+    }
+
+    .input {
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    .copy-link {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .generated-link {
+        width: 80%;
+        text-overflow: ellipsis;
+    }
+
+    .copy-btn {
+        margin-top: 1rem;
+    }
+}
