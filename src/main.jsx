@@ -3,6 +3,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Letter from './pages/letter/Letter'
+import NotFound from './pages/Error/not-found'
 
 // React Router for navigating on different pages
 const router = createBrowserRouter([
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h1>Error: 404 Page Not Found</h1>
+    element: <NotFound/>
   }
 ])
 

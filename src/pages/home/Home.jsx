@@ -31,23 +31,7 @@ const Home = () => {
     
   };
 
-  // Short the link
-  const shortenUrl = async (link) => {
-    try {
-      const response = await fetch(
-        `https://is.gd/create.php?format=json&url=${link}`
-      );
-      const data = await response.json();
-      if (data.shorturl) {
-        console.log(data.shorturl);
-        link = data.shorturl
-      } else {
-        console.log("error");
-      }
-    } catch (error) {
-      console.log("Error shortening URL");
-    }
-  };
+ 
 
   const copyLink = ()=> {
     navigator.clipboard.writeText(link)
