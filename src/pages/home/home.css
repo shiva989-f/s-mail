@@ -164,6 +164,7 @@
 
     .generated-link {
         width: 80%;
+        text-align: center;
         text-overflow: ellipsis;
     }
 

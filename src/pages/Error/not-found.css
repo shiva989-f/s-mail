@@ -1,4 +1,4 @@
-not-found-container {
+.not-found-container {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -14,12 +14,12 @@ not-found-container {
   text-align: center;
 }
 
-img {
+.not-found-img {
   width: 40%;
 }
 
 @media (max-width: 800px) {
-  div {
+  .not-found-container  {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -31,7 +31,7 @@ img {
 }
 
 @media (max-width: 580px) {
-  div {
+  .not-found-container  {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -45,7 +45,7 @@ img {
     font-size: 3rem;
   }
 
-  img {
+  .not-found-img {
     width: 80%;
   }
 }
