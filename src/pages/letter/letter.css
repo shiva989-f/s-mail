@@ -66,9 +66,9 @@ body {
 
 .envelope .letter .receiver-name {
   font-family: great_vibes;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
-  color: var(--receiver-name-color);
+  color: rgba(88, 4, 64, 1);
 }
 
 .envelope .letter .text {
@@ -77,6 +77,12 @@ body {
   text-align: left;
   font-size: 10px;
 }
+
+.envelope .letter .text .message {
+  color: black;
+  font-weight: 600;
+}
+
 .heart {
   position: absolute;
   top: 50%;

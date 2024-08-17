@@ -22,7 +22,7 @@ const Home = () => {
       console.log("Fields Should not empty");
     }
     else {
-      // convert text in encodedUriComponent then in binary Ascii
+      // convert text in encodedUriComponent (covert space into %20 and other symbols to other) then in binary Ascii
       let encodedName = btoa(encodeURIComponent(name));
       let encodedMsg = btoa(encodeURIComponent(message));
       setLink(`${urlLocation}letter/?name=${encodedName}&message=${encodedMsg}`)
@@ -52,6 +52,7 @@ const Home = () => {
 
   const copyLink = ()=> {
     navigator.clipboard.writeText(link)
+    alert("Copied Successfully")
   }
 
   return (
@@ -65,6 +66,7 @@ const Home = () => {
           id="receiver-name"
           className="input"
           type="text"
+          maxLength={12}
           placeholder="Enter Name of Receiver"
         />
         <textarea
@@ -72,6 +74,7 @@ const Home = () => {
           value={message}
           name="msg"
           id="msg"
+          maxLength={100}
           className="input"
           placeholder="Enter your Message"
         ></textarea>

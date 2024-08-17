@@ -9,12 +9,12 @@ const Letter = () => {
   let name;
   let msg; 
   
-  if (urlParam.get("name") === "" || urlParam.get("message") == '') {
-    name = ""
-    msg = ""
+  if (urlParam.get("name") === "" || urlParam.get("message") === "") {
+    name = "Null"
+    msg = "Null"
   }
   else {
-    // convert the encoded uri component from ascii to binary to again ascii in decoded uri component
+    // convert the binary encoded uri to ascii then decode uri
     name = decodeURIComponent(atob(urlParam.get("name")));
     msg = decodeURIComponent(atob(urlParam.get("message")));
   }
@@ -28,7 +28,7 @@ const Letter = () => {
           <div className="letter">
             <div className="text">
               <h2 className="receiver-name">{`Dear ${name}.`}</h2>
-              <p>{`${msg}`}</p>
+              <p className='message'>{`${msg}`}</p>
             </div>
           </div>
         </div>
