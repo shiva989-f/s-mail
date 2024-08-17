@@ -26,7 +26,6 @@ const Home = () => {
       let encodedName = btoa(encodeURIComponent(name));
       let encodedMsg = btoa(encodeURIComponent(message));
       setLink(`${urlLocation}letter/?name=${encodedName}&message=${encodedMsg}`)
-      shortenUrl(link);
       console.log(link);
     }
     
